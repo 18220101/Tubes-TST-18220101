@@ -5,13 +5,13 @@ from utils import get_hash, encode_token, SECRET, authorize
 from models.accounts import LoginParamater
 
 account_rounter = APIRouter(
-    tags=["Accounts"]
+    tags=["Login"]
 )
 
 with open("user.json", "r") as read_file:
     akun = json.load(read_file)
 
-@account_rounter.post("/login")
+@account_rounter.post("/")
 def login(param: LoginParamater, response: Response):
     found = False
     for i in range (len(akun)) :
@@ -26,7 +26,7 @@ def login(param: LoginParamater, response: Response):
                 }
             else:
                 response.status_code = status.HTTP_400_BAD_REQUEST
-                return { "message": "Login tidak berhasil"}
+                return { "message": "Password salah"}
     if not found:
         response.status_code = status.HTTP_400_BAD_REQUEST
         return { "message": "User tidak ditemukan" }

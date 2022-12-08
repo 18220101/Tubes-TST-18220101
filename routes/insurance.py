@@ -13,7 +13,7 @@ with open("customer.json", "r") as read_file:
 
 insurance_model = pickle.load(open('regressor_model.sav','rb')) 
 
-@insurance_router.post("/insurance_prediction")
+@insurance_router.post("/")
 def insurance_prediction(input_parameters : insurance):
     input_data = input_parameters.json()
     input_dictionary = json.loads(input_data)
