@@ -4,6 +4,7 @@ from fastapi import APIRouter, Body, HTTPException, status
 from models.insurance import insurance, insurance_prediction
 from schemas.insurance import insuranceEntity, insurancesEntity
 from bson import ObjectId
+from routes.connect import *
 import numpy as np
 import pickle
 
@@ -40,3 +41,7 @@ async def predict_insurance(body: insurance_prediction):
     input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
     prediction = insurance_model.predict(input_data_reshaped)
     return ('The insurance cost is USD ', prediction[0])
+
+@insurance_router.get("/Prediction/get_prediction_prediction__post")
+def combining_api():
+    return get_db(url)
