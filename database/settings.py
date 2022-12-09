@@ -1,2 +1,2 @@
-mongodb_uri = 'mongodb+srv://18220101:18220101@cluster0.gt4v60z.mongodb.net/?retryWrites=true&w=majority'
-port = 8000
+mongodb_uri = 'mongodb://18220101:18220101@ac-sf9vae5-shard-00-00.gt4v60z.mongodb.net:27017,ac-sf9vae5-shard-00-01.gt4v60z.mongodb.net:27017,ac-sf9vae5-shard-00-02.gt4v60z.mongodb.net:27017/?ssl=true&replicaSet=atlas-evnjbg-shard-0&authSource=admin&retryWrites=true&w=majority'
+port = 8080

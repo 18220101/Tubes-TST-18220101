@@ -44,4 +44,4 @@ async def predict_insurance(body: insurance_prediction):
 
 @insurance_router.get("/Prediction/get_prediction_prediction__post")
 def combining_api():
-    return get_db(url)
+    return get_db()
