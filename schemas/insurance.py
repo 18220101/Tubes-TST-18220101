@@ -2,7 +2,7 @@ def insuranceEntity(item) -> dict:
     return {
             "_id":str(item["_id"]),
             "id":item["id"],
-            "name":item["nama"],
+            "name":item["name"],
             "age":item["age"],
             "sex":item["sex"],
             "bmi":item["bmi"],

@@ -14,7 +14,7 @@ async def retrieve_all_insurance() -> List[insurance]:
     return insurancesEntity(client.insurance.insurance.find())
 
 @insurance_router.get("/{id}")
-async def retrieve_insurace(id: int) -> insurance:
+async def retrieve_id_insurace(id: int) -> insurance:
     return insuranceEntity(client.insurance.insurance.find_one({"id":id}))
 
 @insurance_router.post("/new")
