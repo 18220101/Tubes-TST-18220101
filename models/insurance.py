@@ -11,3 +11,11 @@ class insurance(BaseModel):
     children: int
     smoker: bool
     region: str
+
+class insurance_prediction(BaseModel):
+    age: int
+    sex: int
+    bmi: float
+    children: int
+    smoker: int
+    region: int
